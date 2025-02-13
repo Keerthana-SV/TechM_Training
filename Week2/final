@@ -1,0 +1,22 @@
+package final_keyword;
+
+public final class Final {
+	 final public  void hi() {
+   	   System.out.println("hi");
+      }
+}
+
+public class Hii extends Final{
+	 public  void hi() {
+	   	   System.out.println("hi");
+	      }
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+   int number=9;
+   number=7;
+   System.out.println(number);
+  Final h=new Final();
+  h.hi();
+	}
+
+}
