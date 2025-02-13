@@ -1,0 +1,58 @@
+package oops;
+
+public class Car {
+    String make;
+    String model;
+    int year;
+    void Car(String make,String model,int year) {
+    	this.make=make;
+     	this.model=model;
+     	this.year=year;
+    }
+    void set_make(String make) {
+    	this.make=make;
+    }
+	String get_make(){
+		return make;
+	}
+	void set_model(String model) {
+	    	this.model=model;
+	    }
+	String get_model(){
+			return model;
+		}
+	  
+	void set_year(int year) {
+    	this.year=year;
+    }
+	int get_year(){
+		return year;
+	}
+	public void startEngine() {
+		System.out.println("Engine has started");
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+      ElectricCar c =new ElectricCar();
+      c.startEngine();
+      c.chargeBattery();
+      c.Car("toyota","corolla",1950);
+      System.out.println(c.get_make());
+      System.out.println(c.get_model());
+      System.out.println(c.get_year());
+      
+      
+	}
+
+
+}
+
+public class ElectricCar extends Car {
+   
+	int batteryrange;
+	public void chargeBattery() {
+		System.out.println("battery is being charged");
+	}
+
+}
