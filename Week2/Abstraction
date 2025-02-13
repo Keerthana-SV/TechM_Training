@@ -1,0 +1,17 @@
+package abstraction;
+
+  abstract class Animal {
+   abstract void makesound();
+}
+class Dog {
+	
+	 void makesound() {
+		System.out.println("Dog is barking");
+	}
+		public static void main(String[] args) {
+			// TODO Auto-generated method stub
+         Dog d=new Dog();
+         d.makesound();
+		}
+
+}
