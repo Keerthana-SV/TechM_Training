@@ -1,0 +1,86 @@
+package objects_class;
+
+public class User {
+   String name;
+   int age;
+    User(String name,int age) {
+	   this.name=name;
+	   this.age=age;
+   }
+    void set_name(String name){
+	   this.name=name;
+   }
+   String get_name(){
+	   return name;
+   }
+ void set_age(int age){
+	   this.age=age;
+   }
+ int get_age(){
+	   return age;
+   }
+ @Override
+ public String toString() {
+     return "User{name='" + name + "', age=" + age + "}";
+ }
+ 
+ @Override
+ public int hashCode() {
+     return name.hashCode()+age;
+ }
+ 
+ @Override
+ public boolean equals(Object obj) {
+     if (this == obj) return true;
+     if (obj == null || getClass() != obj.getClass()) return false;
+     User user = (User) obj;
+     return age == user.age && name.equals(user.name);
+ }
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+	User u=new User("keer",23);
+	User v=new User("keer",923);
+	SecondUser a=new SecondUser("harini",56);
+	SecondUser b=new SecondUser("harini",56);
+ System.out.println(u);
+ System.out.println(b);
+ 
+ System.out.println(u.hashCode());
+ System.out.println(b.hashCode());
+
+ System.out.println(u.toString());
+ System.out.println(b.toString());
+
+ System.out.println(u.get_name());
+	
+ System.out.println(u.equals(v));
+ System.out.println(a.equals(b));
+
+ System.out.println(u==v);
+ System.out.println(a==b);
+
+
+	}
+}
+public class SecondUser {
+	String name;
+	   int age;
+	   SecondUser(String name,int age) {
+		   this.name=name;
+		   this.age=age;
+	   }
+	   void set_name(String name){
+		   this.name=name;
+	   }
+	   String get_name(){
+		   return name;
+	   }
+	   void set_age(int age){
+		   this.age=age;
+	   }
+	   int get_age(){
+		   return age;
+	   }
+	   
+	 
+}
