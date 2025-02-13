@@ -1,0 +1,24 @@
+package polymorphism;
+
+public class Car {
+	    public void startEngine() {
+	        System.out.println("The car's engine is starting...");
+	    }
+	}
+
+	// Subclass
+	class ElectricCar extends Car {
+	    @Override
+	    public void startEngine() {
+	        System.out.println("The electric car is powering up silently...");
+	    }
+	
+
+	    public static void main(String[] args) {
+	        Car[] cars = {new Car(), new ElectricCar(), new Car(), new ElectricCar()};
+
+	        for (Car car : cars) {
+	            car.startEngine(); // Demonstrates polymorphism
+	        }
+	    }
+	    }
