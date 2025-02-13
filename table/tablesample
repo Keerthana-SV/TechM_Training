@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale="1.0">
+    <title>IPL TEAM</title>
+</head>
+<body>
+    <h1></h1>
+    <table border="8">
+        <thead>
+            <tr>
+                <th>Team name</th>
+                <th>Home cities</th>
+                <th>Captain</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>CSK</td>
+                <td>chennai</td>
+                <td>Dhoni</td>
+
+            </tr>
+            <tr>
+                <td>RCB</td>
+                <td>Rajasthan</td>
+                <td>Kholi</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
