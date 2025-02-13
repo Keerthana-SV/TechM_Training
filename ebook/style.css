@@ -1,1 +1,27 @@
-
+h1{
+text-align:center;   
+font-family:"roboto";
+}
+p{
+    color:grey;
+}
+footer{
+  
+    text-align:center; 
+    flex-direction:column;
+    justify-content: flex-end;
+    align-items:end;
+}
+#name{
+    padding:10px;
+    margin:10px
+}
+button{
+    margin:30px;
+    background-color:lightskyblue;
+    padding:10px;
+    border-radius: 20px;
+    border-width:0px;
+    margin-left:80px;
+    color:brown;
+}
