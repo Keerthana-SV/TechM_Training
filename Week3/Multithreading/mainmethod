@@ -1,0 +1,16 @@
+package multithreading;
+
+public class Lists {
+
+	public static void main(String[] args) {
+     Listsample l=new Listsample();
+     Stacksample s=new Stacksample();
+     Vectorsample v=new Vectorsample();
+     Linkedlistsample b=new Linkedlistsample();
+     l.start();
+     s.start();
+     v.start();
+     b.start();
+	}
+
+}
