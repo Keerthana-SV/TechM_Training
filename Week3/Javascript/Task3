@@ -1,0 +1,15 @@
+const c=10;
+function primeno(){
+  for(let i=2;i<c;i++){
+     if(c%i==0)
+        return false
+     else
+        return true
+  } 
+}
+if(primeno(c)){
+    console.log("Prime number")
+}
+else{
+    console.log("Not Prime Number")
+}
