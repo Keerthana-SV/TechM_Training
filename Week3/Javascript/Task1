@@ -1,1 +1,5 @@
-
+let a=4;
+function cubeofa(){
+    console.log(a**3);
+}
+cubeofa();
