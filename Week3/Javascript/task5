@@ -1,0 +1,8 @@
+let willgotofilm=confirm("Are you going to the film?");
+if(willgotofilm){
+    alert("Well!!Enjoy your film today!");
+    
+}
+else{
+    alert("Will see next time!");
+}
