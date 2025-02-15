@@ -1,0 +1,25 @@
+package thread;
+
+public class Task3_Thread3 extends Thread{
+	public void run() {
+		System.out.println("From Thread 3");
+		System.out.println("From Thread 3");
+		System.out.println("From Thread 3");
+		System.out.println("From Thread 3");
+		System.out.println("From Thread 3");
+	}
+
+
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+          Task3_Thread3 t1=new  Task3_Thread3();
+          Task3_Thread3 t2=new  Task3_Thread3();
+          Task3_Thread3 t3=new  Task3_Thread3();
+          t1.start();
+          t2.start();
+          t3.start();
+         
+	}
+
+}
