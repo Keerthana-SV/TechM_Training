@@ -1,0 +1,19 @@
+let month=prompt("Enter the month:").toLowerCase();
+if(isNaN(year)){
+    console.log("Invalid input! Please enter a valid year.")
+}
+else{
+    if(year%4===0 && (year%100!==0||year%400===0)){
+       console.log(year+" is leap year")
+       if(month==="february"){
+          console.log("The year is leap year and the month is february with 29 days.");
+    }
+       else{
+        console.log("The year is leap year and the month is not february.");
+       }
+}
+   else{
+    console.log("The year is not leap year")
+  }
+}
+    
