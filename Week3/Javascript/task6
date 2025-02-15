@@ -1,0 +1,8 @@
+let age=prompt("Enter your age");
+if(age!=="" &&age!==null ){
+    alert("Your age is: "+age);
+    
+}
+else{
+    alert("You didn't enter your age!");
+}
