@@ -1,0 +1,17 @@
+package thread;
+
+class K_task1_thread1 extends Thread{
+   public void run(){
+	   System.out.println("From ThreadOne!");
+	   System.out.println("From Threadone!");
+	   System.out.println("From Threadone!");
+   }
+}
+class Multithreading {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		K_task1_thread1 m=new K_task1_thread1();
+		m.run();
+	}
+
+}
