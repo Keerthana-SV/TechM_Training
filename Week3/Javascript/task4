@@ -1,0 +1,8 @@
+let useraddress=prompt("Enter the address")
+if(useraddress){
+    alert("The user address is "+useraddress)
+    
+}
+else{
+    alert("You didn't enter the address")
+}
