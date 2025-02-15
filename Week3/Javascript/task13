@@ -1,0 +1,9 @@
+let num1=parseInt(prompt("Enter the number1: "));
+let num2=parseInt(prompt("Enter the number2: "));
+let num3=num2+40
+while(num2<=num3){
+    if(num2%num1==0){
+        console.log(num2)
+    }
+   num2+=1
+}
