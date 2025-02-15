@@ -1,0 +1,8 @@
+let num1=parseInt(prompt("Enter the number1: "));
+let num2=num1+30;
+for(i=num1;i<=num2;i++){
+    if(i%7==0){
+        continue;
+    }
+     console.log(i)
+}
