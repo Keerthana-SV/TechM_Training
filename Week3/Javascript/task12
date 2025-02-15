@@ -1,0 +1,5 @@
+let num1=parseInt(prompt("Enter the number1: "));
+let num2=parseInt(prompt("Enter the number2: "));
+for(i=1;i<=num2;i++){
+console.log(`${num1}*${i}=${num1*i}`);
+}
