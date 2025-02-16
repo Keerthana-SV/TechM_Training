@@ -1,0 +1,33 @@
+package java_basics;
+
+
+public class Java_IO {
+    public static void sop(String s){
+    	System.out.print(s);
+    }
+    public static void sopln(String s){
+    	System.out.println(s);
+    }
+    public static void err(String s){
+    	System.err.print(s);
+    }
+    public static void err2(String s){
+    	System.err.println(s);
+    }
+    
+    
+    
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+	
+	 sop("Hello ");
+	 sop("World!!");
+	 sopln("Welcome");
+	 sopln("to");
+	 sopln("Java");
+	 System.out.flush();
+	 err2("Error message");
+	 err2("Another Error message");
+	}
+
+}
