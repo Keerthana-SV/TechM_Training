@@ -1,0 +1,31 @@
+package java_basics;
+import java.util.Scanner;
+import java.io.IOException;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.io.BufferedInputStream;
+public class ScannerClasses {
+  
+
+	public static void main(String[] args) throws IOException {
+		// TODO Auto-generated method stub
+		 Scanner sc=new Scanner(System.in);
+		 System.out.println("Enter the input String:");
+		 String a=sc.nextLine();
+		 System.out.println("The entered String is "+a);
+		 
+		 System.out.println("Enter the input integer:");
+		 int b=sc.nextInt();
+		 System.out.println("The entered Integer is "+b);
+		 
+		 System.out.println("Enter the input float:");
+		 float c=sc.nextFloat();
+		 System.out.println("The entered Float is "+c);
+		 
+		 BufferedReader r=new BufferedReader(new InputStreamReader(System.in));
+		 System.out.println("Enter the input String:");
+		 String s=sc.readLine();
+		 System.out.println("The entered String is "+s);
+	}
+
+}
