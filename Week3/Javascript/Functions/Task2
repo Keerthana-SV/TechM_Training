@@ -1,0 +1,9 @@
+num=parseInt(prompt("Enter the number: "));
+function factors(num){
+    for(let i=1;i<=num;i++){
+      if(num%i===0){
+          console.log(`The factors of ${num} are `+i)
+    }
+}
+}
+factors(num)
