@@ -1,0 +1,9 @@
+let a=parseInt(prompt("Enter first number: "));
+let b=parseInt(prompt("Enter Second number: "));
+
+function multiplicationtable() {
+    for(let i=1;i<=b;i++){
+       console.log(`${a}*${i}=${a*i}`);
+}
+}
+multiplicationtable()
