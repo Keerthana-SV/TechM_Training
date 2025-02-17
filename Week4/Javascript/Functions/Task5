@@ -1,0 +1,54 @@
+let student = {
+    id: 102,
+    name: "Keerthana",
+    department: "Electronics and Communication",
+    college: "Panimalar College",
+    email: "keerthana@example.com",
+
+    displayAllDetails: function () {
+        console.log(`ID: ${this.id}`);
+        console.log(`Name: ${this.name}`);
+        console.log(`Department: ${this.department}`);
+        console.log(`College: ${this.college}`);
+        console.log(`Email: ${this.email}`);
+    },
+
+  
+    displayBasicDetails: function () {
+        console.log(`ID: ${this.id}`);
+        console.log(`Name: ${this.name}`);
+        console.log(`Email: ${this.email}`);
+    }
+};
+
+console.log("Displaying All Details:");
+student.displayAllDetails();
+console.log("\nDisplaying Basic Details:");
+student.displayBasicDetails();
+
+
+student.address = {
+    doorNo: "45B",
+    street: "Anna Nagar",
+    area: "Chennai",
+    pincode: "600040"
+};
+
+
+student.displayWithAddress = function () {
+    console.log(`ID: ${this.id}`);
+    console.log(`Name: ${this.name}`);
+    console.log(`Department: ${this.department}`);
+    console.log(`College: ${this.college}`);
+    console.log(`Address: ${this.address.doorNo}, ${this.address.street}, ${this.address.area}, ${this.address.pincode}`);
+};
+
+console.log("\nDisplaying Details with Address:");
+student.displayWithAddress();
+
+delete student.email;
+
+delete student.displayBasicDetails;
+
+console.log("\nAfter Deleting Email and Basic Details Function:");
+console.log(student);
