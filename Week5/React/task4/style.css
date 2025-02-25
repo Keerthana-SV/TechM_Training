@@ -1,0 +1,41 @@
+/* General body and page layout */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f7f6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Main container for the app */
+.App {
+  width: 80%;
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  text-align: center;
+}
+
+/* Animal component container */
+.animal-container {
+  margin-top: 20px;
+}
+
+/* Heading styles */
+h2 {
+  color: #333333;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+/* Paragraph styles */
+p {
+  color: #666666;
+  font-size: 18px;
+}
