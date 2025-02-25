@@ -1,69 +1,24 @@
-package org.example.assignment.corejava.Task5;
+package org.example.assignment.corejava.Task6;
 
-import java.util.Arrays;
+import java.util.List;
 
-class SortThread extends Thread {
-    private int[] arr;
-
-    public SortThread(int[] arr) {
-
-        this.arr = arr;
+class task3 {
+    public static <T> int findFirstIndex(List<T> list, T target) {
+        for (int i = 0; i < list.size(); i++) {
+            if (list.get(i).equals(target)) {
+                return i; 
+            }
+        }
+        return -1; 
     }
 
-    public int[] getSortedArray() {
-
-        return arr;
-    }
-
-    @Override
-    public void run() {
-        Arrays.sort(arr);
-    }
-}
-
-public class task3 {
     public static void main(String[] args) {
-        int[] arr = {5,6,7,1,2,3,4,9,0};
-        System.out.println("Unsorted Array: " + Arrays.toString(arr));
+        List<Integer> intList = List.of(10, 20, 30, 40, 50, 30);
+        System.out.println("Index of 30 in intList: " + findFirstIndex(intList, 30));
+        System.out.println("Index of 100 in intList: " + findFirstIndex(intList, 100));
 
-        int mid = arr.length / 2;
-        int[] leftHalf = Arrays.copyOfRange(arr, 0, mid);
-        int[] rightHalf = Arrays.copyOfRange(arr, mid, arr.length);
-
-        SortThread leftSorter = new SortThread(leftHalf);
-        SortThread rightSorter = new SortThread(rightHalf);
-
-        leftSorter.start();
-        rightSorter.start();
-
-        try {
-            leftSorter.join();
-            rightSorter.join();
-        } catch (InterruptedException e) {
-            System.out.println(e.getMessage());
-        }
-
-        int[] sortedArray = merge(leftSorter.getSortedArray(), rightSorter.getSortedArray());
-
-        System.out.println("Sorted Array: " + Arrays.toString(sortedArray));
-    }
-
-    private static int[] merge(int[] left, int[] right) {
-        int[] result = new int[left.length + right.length];
-        int i = 0, j = 0, k = 0;
-
-        while (i < left.length && j < right.length) {
-            result[k++] = (left[i] < right[j]) ? left[i++] : right[j++];
-        }
-
-        while (i < left.length) {
-            result[k++] = left[i++];
-        }
-
-        while (j < right.length) {
-            result[k++] = right[j++];
-        }
-
-        return result;
+        List<String> strList = List.of("apple", "banana", "cherry", "banana", "grapes");
+        System.out.println("Index of 'grapes' in strList: " + findFirstIndex(strList, "grapes"));
+        System.out.println("Index of 'mango' in strList: " + findFirstIndex(strList, "mango"));
     }
 }
