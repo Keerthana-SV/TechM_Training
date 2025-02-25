@@ -1,69 +1,29 @@
-package org.example.assignment.corejava.Task5;
+package org.example.assignment.corejava.Task6;
 
-import java.util.Scanner;
+import java.util.ArrayList;
+import java.util.List;
 
-class Prime extends Thread {
-    int start, end;
-    long sum = 0;
+class task5 {
+    public static <T> List<T> mergeAlternating(List<T> list1, List<T> list2) {
+        List<T> mergedList = new ArrayList<>();
+        int size1 = list1.size(), size2 = list2.size();
+        int i = 0, j = 0;
 
-    Prime(int start, int end) {
-        this.start = start;
-        this.end = end;
-    }
-
-    private boolean isPrime(int num) {
-        if (num < 2) return false;
-        for (int i = 2; i * i <= num; i++) {
-            if (num % i == 0) return false;
+        while (i < size1 || j < size2) {
+            if (i < size1) mergedList.add(list1.get(i++)); // Add from first list
+            if (j < size2) mergedList.add(list2.get(j++)); // Add from second list
         }
-        return true;
+
+        return mergedList;
     }
 
-    public void run() {
-        for (int i = start; i <= end; i++) {
-            if (isPrime(i)) {
-                sum += i;
-            }
-        }
-        //System.out.println(10/0);
-    }
-
-    public long getSum() {
-
-        return sum;
-    }
-}
-
-public class task5 {
     public static void main(String[] args) {
-        Scanner sc=new Scanner(System.in);
-        System.out.println("Enter the limit: ");
-        int limit = sc.nextInt();
-        System.out.println("Enter the number: ");
-        int numThreads = sc.nextInt();
-        Prime[] threads = new Prime[numThreads];
+        List<Integer> intList1 = List.of(1, 3, 5, 7);
+        List<Integer> intList2 = List.of(2, 4, 6, 8, 10);
+        System.out.println("Merged Integer List: " + mergeAlternating(intList1, intList2));
 
-        int range = limit / numThreads;
-        int start = 1;
-        int end;
-        long totalSum = 0;
-
-        for (int i = 0; i < numThreads; i++) {
-            end = (i == numThreads - 1) ? limit : start + range - 1;
-            threads[i] = new Prime(start, end);
-            threads[i].start();
-            start = end + 1;
-        }
-
-        for (Prime thread : threads) {
-            try {
-                thread.join();
-                totalSum += thread.getSum();
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-        }
-
-        System.out.println("Sum of prime numbers up to " + limit + " is: " + totalSum);
+        List<String> strList1 = List.of("A", "C", "E");
+        List<String> strList2 = List.of("B", "D", "F", "G");
+        System.out.println("Merged String List: " + mergeAlternating(strList1, strList2));
     }
 }
