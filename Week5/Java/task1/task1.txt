@@ -1,0 +1,9 @@
+Task 1:
+Task 1:Writea Javaprogramto copy the alternative elementsinthe array.
+Task 2 :Write a java programto acceptthe students name andmarksin subjects and find the total and averageofthe
+marks and sort the list accordingly.
+Task 3 :Demonstrate with an example with the difference between equals() vs deepEquals() method?
+Task 4 :Use ArrayCopyRange() function to demonstrate and example such that you copy the range of valuesin an
+array.
+Task 5 :You are requiredtocreate a string andcaptialize every alternative character. for
+eg :ifthe inputis anurag then outputshould beAnUrAg
