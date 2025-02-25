@@ -1,0 +1,12 @@
+Perform all three conditionals (if, logical && and ternary operator) for the following:
+
+1. Check if a number is divisible by 13. And display the results accordingly
+
+2. check if the given string's length is even or odd and display the results
+
+3. Check if the given array contains the number of elements, as the multiples of 3. 
+[9,4,24] - The number of elements, in the array is multiple of 3.
+[9,24] - The number of elements, in the array is not the multiple of 3.
+4. Check if the given string contains any vowel and display the results
+
+5. Create an array with flowers [Rose, Jasmine,Lotus] in . Get an input string. Check if it is an element of array. If yes, display its a flower. Else, say that its not a flower.
