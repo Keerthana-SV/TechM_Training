@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './styles.css'; // Import the styles.css file
-import App from './App'; // Import the main App component
+import './styles.css'; 
+import App from './App';
 
-// Render the App component inside the root div in index.html
+
 ReactDOM.render(
   <React.StrictMode>
     <App />
