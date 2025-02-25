@@ -1,0 +1,59 @@
+package luna;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+
+@WebServlet("/loginServlet") 
+public class Task4 extends HttpServlet {
+    private static final long serialVersionUID = 1L;
+
+    public Task4() { 
+        super();
+    }
+
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String user = request.getParameter("username"); 
+        String pass = request.getParameter("password"); 
+
+        System.out.println("Username: " + user);
+        System.out.println("Password: " + pass);
+
+        response.setContentType("text/html");
+        PrintWriter w = response.getWriter();
+
+        String htmlResponse = "<html><body>";
+        htmlResponse += "<h2>Your username is: " + username + "</h2>";
+        htmlResponse += "<h2>Your password is: " + password + "</h2>";
+        htmlResponse += "</body></html>";
+
+        w.println(htmlResponse);
+    }
+
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        doGet(request, response); 
+    }
+}
+============================================================================================================================
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Login Form</title>
+</head>
+<body>
+    
+    <form name="loginForm" action="loginServlet" method="post">
+        Username: <input type="text" name="username"> <br>
+        Password: <input type="password" name="password"> <br>
+        <input type="submit" value="Login"> 
+    </form>
+
+</body>
+</html>

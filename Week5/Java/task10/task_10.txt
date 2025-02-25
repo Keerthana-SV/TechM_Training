@@ -1,0 +1,9 @@
+Given a table with rows and columns. Perform CRUD operatios on it using JDBC API
+
+Create a Java program to represent Interthread communication
+
+Create an object called student in Javascript with 3 properties and 1 method and access them with the object.
+Then add a nested object and 2 more functions to it. Access all the properties and functions.
+Remove a normal property and a function and then display the details of the object.
+
+Create a simple Java servlet to display a HTML file with its content
