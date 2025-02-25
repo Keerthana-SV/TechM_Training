@@ -1,0 +1,22 @@
+Task 7 - Collection Api:
+
+1. Write a Java program to create an array list, add some colors (strings) and print out the collection.
+2. Write a Java program to iterate through all elements in an array list.
+3. Write a Java program to insert an element into the array list at the first position.
+4. Write a Java program to retrieve an element (at a specified index) from a given array list.
+5. Write a Java program to update an array element by the given element.
+6. Write a Java program to remove the third element from an array list.
+7. Write a Java program to search for an element in an array list.
+8. Write a Java program to sort a given array list.
+9. Write a Java program to copy one array list into another.
+10. Write a Java program to shufle elements in an array list.
+11. Write a Java program to append the specified element to the end of a linked list.
+12. Write a Java program to iterate through all elements in a linked list.
+13. Write a Java program to iterate through all elements in a linked list starting at the specified position.
+14. Write a Java program to iterate a linked list in reverse order.
+15. Write a Java program to insert the specified element at the specified position in the linked list.
+16. Write a Java program to insert elements into the linked list at the first and last positions.
+17. Write a Java program to insert the specified element at the front of a linked list.
+18. Write a Java program to insert the specified element at the end of a linked list.
+19. Write a Java program to insert some elements at the specified position into a linked list.
+20. Write a Java program to get the first and last occurrence of the specified elements in a linked list.
