@@ -1,0 +1,240 @@
+.home-heading{
+    text-align:center;
+    background-color: rgb(41, 103, 124);
+    color:white;
+    padding:15px;
+    font-family:'Times New Roman';
+    font-size:20px;
+    margin-top:40px;
+    height:12vh;
+    align-items:center;
+    display:flex;
+    justify-content:center;
+    padding-top:25px;
+}
+.navbar{
+    color:white;
+    
+}
+
+.home-para{
+    align-items:center;
+    justify-content:center;
+    height:90vh;
+    display:flex;
+    margin-right:20px;
+    background-color: whitesmoke;
+}
+.home-image{
+height:90vh;
+width:90vw;
+margin-left:auto;
+}
+.home-text{
+    margin-left:30px;
+   font-family:'sans-serif';
+}
+#course-main{
+   text-align:center;
+   padding-top:30px;
+    display:flex;
+    min-height:40vh;
+    justify-content:center;
+    background-color: #ddd;
+   
+}
+.course-userreview {
+    display:flex;
+    justify-content:center;
+    color: rgb(41, 103, 124);
+}
+.course-review-container{
+    background-color: #ddd;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+  padding-bottom:30px;
+   margin:auto;
+    width:100%
+}
+.course-page h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 10px;
+    color: rgb(41, 103, 124);
+}
+.go-back{
+   align-items:center;
+   margin-left:10px;
+   margin-bottom:8vh;
+}
+
+#instructor-main{
+    text-align: center;
+   justify-content:center;
+    min-height:130vh;
+    display:flex;
+    align-items:center;
+    background-color: rgb(137, 190, 208);
+    color:white
+   
+}
+.instructor-page h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 10px;
+    color: rgb(41, 103, 124);
+   
+}
+.enrollment-page h2{
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 10px;
+   color: rgb(41, 103, 124);
+}
+.review-card h3 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.review-card p {
+    font-size: 1rem;
+    color: #555;
+}
+.courseinstructors-para{
+   
+        font-size: 1.2rem;
+        color: #666;
+        max-width: 600px;
+        margin: 0 auto 20px;
+        line-height: 1.6;
+  
+}
+.start{
+    float:right;
+    justify-content:flex-center;
+    display:flex;
+    padding:10px 20px;
+    text-align:center;
+    margin-right:20px;
+}
+.course-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    margin: 10px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+    text-align: center;
+    width: 300px;
+}
+#enrollment-main{
+   
+    min-height:100vh;
+    flex-grow:1;
+    
+}
+.enrollmentmain{
+    margin-top:5vh;
+    margin-bottom:5vh;
+}
+.course-container {
+ 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  
+}
+.course-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+.enroll-btn {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+footer{
+    position: relative; 
+    bottom: 0;
+    width: 100%;
+   
+    height:50vh;
+}
+#enrollment-form{
+   font-family: Arial, sans-serif; 
+    margin: 20px; 
+    max-width: 400px; 
+    margin: auto; 
+}
+label { display: block; margin-top: 10px; }
+input, select, button {padding: 8px; margin-top: 5px; }
+.error { color: red; font-size: 12px; }
+.review-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 900px;
+    margin: auto;
+}
+.review-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 300px;
+    border: 1px solid #ddd;
+   
+}
+.review-card h3 {
+    font-size: 18px;
+    color: #333;
+}
+.review-card p {
+    font-size: 14px;
+    color: #666;
+    font-style: italic;
+    margin-top: 10px;
+}
+.btn-primary {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+.why-choose-us {
+    background: #f8f9fa;
+    padding: 50px 20px;
+    background-color: rgb(137, 190, 208);
+    height:50vh;
+}
+
+.company-logos {
+    gap: 20px;
+}
+
+.company-logo {
+    width: 120px;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+.company-logo:hover {
+    transform: scale(1.1);
+}
