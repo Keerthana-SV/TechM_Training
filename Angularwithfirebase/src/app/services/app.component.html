@@ -1,0 +1,28 @@
+<div *ngIf="user$ | async as user; else loginUI">
+  <div class="chat-container">
+
+    <button class="logout-btn" (click)="logout()">Logout</button>
+
+    <!-- Messages -->
+    <div #messagesContainer class="messages">
+      <div *ngFor="let msg of messages$ | async" [ngClass]="{'my-msg': msg.uid === user.uid, 'other-msg': msg.uid !== user.uid}">
+        <div class="msg-header">
+          <strong>{{ msg.displayName }}</strong>
+          <span class="timestamp">{{ msg.timestamp | date: 'shortTime' }}</span>
+        </div>
+        <div class="msg-text">{{ msg.text }}</div>
+      </div>
+    </div>
+
+    <!-- Input + Send button -->
+    <div class="input-area">
+      <input [(ngModel)]="messageText" placeholder="Type a message..." />
+      <button (click)="sendMessage(user)">Send</button>
+    </div>
+
+  </div>
+</div>
+
+<ng-template #loginUI>
+  <button (click)="login()">Login with Google</button>
+</ng-template>
