@@ -1,0 +1,17 @@
+class Constants {
+  static const String appName = "SafeTrack";
+
+  // Firebase Collection Names
+  static const String usersCollection = "users";
+  static const String sosCollection = "sos_alerts";
+
+  // Google Maps API Key
+  static const String googleMapsApiKey = "YOUR_GOOGLE_MAPS_API_KEY";
+
+  // Emergency Contacts
+  static const List<String> emergencyContacts = [
+    "100", // Police
+    "108", // Ambulance
+    "1091" // Women's Helpline
+  ];
+}
