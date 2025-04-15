@@ -1,4 +1,4 @@
-import { Component, ElementRef, ViewChild, AfterViewChecked, inject } from '@angular/core';
+import { Component, ElementRef, ViewChild, AfterViewChecked, inject, OnInit } from '@angular/core';
 import { AuthService } from './services/auth.service';
 import { ChatService } from './services/chat.service';
 import { Observable } from 'rxjs';
@@ -9,10 +9,10 @@ import { FormsModule } from '@angular/forms';
   selector: 'app-root',
   standalone: true,
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css',
+  styleUrls: ['./app.component.css'],  // Updated for multiple styles
   imports: [CommonModule, FormsModule],
 })
-export class AppComponent implements AfterViewChecked {
+export class AppComponent implements OnInit, AfterViewChecked {
   private authService = inject(AuthService);
   private chatService = inject(ChatService);
 
@@ -20,7 +20,23 @@ export class AppComponent implements AfterViewChecked {
   messages$: Observable<any> = this.chatService.getMessages();
   messageText = '';
 
+  currentTheme = 'light-theme'; // default theme
+
   @ViewChild('messagesContainer') private messagesContainer!: ElementRef;
+
+  ngOnInit() {
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+      this.currentTheme = savedTheme;
+      document.body.className = this.currentTheme;
+    }
+  }
+
+  switchTheme(theme: string) {
+    this.currentTheme = theme;
+    document.body.className = theme;
+    localStorage.setItem('theme', theme);
+  }
 
   ngAfterViewChecked() {
     this.scrollToBottom();
@@ -40,6 +56,12 @@ export class AppComponent implements AfterViewChecked {
       this.messageText = '';
     }
   }
+  isDropdownOpen = false;
+
+toggleDropdown() {
+  this.isDropdownOpen = !this.isDropdownOpen;
+}
+
 
   private scrollToBottom(): void {
     if (this.messagesContainer) {
