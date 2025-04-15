@@ -1,4 +1,4 @@
-/* === THEME SUPPORT === */
+
 body.light-theme {
     background-color: #f0f0f0;
     color: #000;
@@ -23,14 +23,13 @@ body.light-theme {
     
   }
   
-  /* Make chat container & messages area inherit body theme */
+ 
   .chat-container,
   .messages {
     background-color: inherit !important;
     color: inherit;
   }
   
-  /* Keep input-area static and neutral (no theming applied) */
   .input-area {
     background-color: #f0f0f0 !important;
     color: #000 !important;
