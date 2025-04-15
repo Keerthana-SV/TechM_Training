@@ -1,9 +1,24 @@
 <div *ngIf="user$ | async as user; else loginUI">
   <div class="chat-container">
 
-    <button class="logout-btn" (click)="logout()">Logout</button>
+   
+   
+<!-- Theme Switcher Dropdown (Click-based) -->
+<div class="theme-dropdown">
+  <button class="dropdown-toggle" (click)="toggleDropdown()">🎨 Themes</button>
+  <div class="dropdown-menu" *ngIf="isDropdownOpen">
+    <button (click)="switchTheme('light-theme')">🌞 Light</button>
+    <button (click)="switchTheme('dark-theme')">🌙 Dark</button>
+    <button (click)="switchTheme('ocean-theme')">🌊 Ocean</button>
+    <button (click)="switchTheme('sunset-theme')">🌇 Sunset</button>
+  
+  </div>
+  <button class="logout-btn" (click)="logout()">Logout</button>
+ 
+</div>
 
-    <!-- Messages -->
+    
+    <!-- 📨 Messages Area -->
     <div #messagesContainer class="messages">
       <div *ngFor="let msg of messages$ | async" [ngClass]="{'my-msg': msg.uid === user.uid, 'other-msg': msg.uid !== user.uid}">
         <div class="msg-header">
@@ -14,7 +29,7 @@
       </div>
     </div>
 
-    <!-- Input + Send button -->
+    <!-- 💬 Input Area -->
     <div class="input-area">
       <input [(ngModel)]="messageText" placeholder="Type a message..." />
       <button (click)="sendMessage(user)">Send</button>
@@ -23,6 +38,9 @@
   </div>
 </div>
 
+<!-- 🔐 Login UI -->
 <ng-template #loginUI>
-  <button (click)="login()">Login with Google</button>
+  <div class="login-container">
+    <button (click)="login()" class="login-btn">Login with Google</button>
+  </div>
 </ng-template>
