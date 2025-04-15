@@ -1,1 +1,38 @@
-/* You can add global styles to this file, and also import other style files */
+/* === THEME SUPPORT === */
+body.light-theme {
+    background-color: #f0f0f0;
+    color: #000;
+  }
+  
+  body.dark-theme {
+    background-color: #1e1e1e;
+    
+  }
+  body.ocean-theme {
+    background-color: #e0f7fa;
+ 
+  }
+  .theme-switcher{
+    align-self: flex-end;
+  }
+  
+  
+  .sunset-theme {
+    background-color: #fff3e0;
+ 
+    
+  }
+  
+  /* Make chat container & messages area inherit body theme */
+  .chat-container,
+  .messages {
+    background-color: inherit !important;
+    color: inherit;
+  }
+  
+  /* Keep input-area static and neutral (no theming applied) */
+  .input-area {
+    background-color: #f0f0f0 !important;
+    color: #000 !important;
+  }
+  
