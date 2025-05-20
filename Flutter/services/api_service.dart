@@ -1,27 +1,42 @@
 import 'dart:convert';
+import 'dart:math';
 import 'package:http/http.dart' as http;
 import '../models/movie.dart';
 
 class ApiService {
-  static const String _baseUrl = "http://www.omdbapi.com/";
-  static const String _apiKey = "38c21b48";  // Use your own API key
+  static const String _baseUrl = "www.omdbapi.com";
+  static const String _apiKey = "38c21b48";
+  static final Random _random = Random();
 
-  static Future<List<Movie>> fetchMovies(String query) async {
-    final response = await http.get(Uri.parse("$_baseUrl/?apikey=$_apiKey&s=$query"));
+  static Future<List<Movie>> fetchMovies({
+    required String query,
+    required int page,
+  }) async {
+    try {
+      final uri = Uri.https(_baseUrl, '', {
+        'apikey': _apiKey,
+        's': query,
+        'page': page.toString(),
+        'type': 'movie',
+      });
 
-    print("Response Code: ${response.statusCode}");
-    print("Response Body: ${response.body}");
-
-    if (response.statusCode == 200) {
-      final data = json.decode(response.body);
-      if (data["Response"] == "True") {
-        List<dynamic> results = data['Search'];
-        return results.map((json) => Movie.fromJson(json)).toList();
-      } else {
-        throw Exception(data["Error"] ?? "Failed to load movies");
+      final response = await http.get(uri);
+      
+      if (response.statusCode == 200) {
+        final data = json.decode(response.body);
+        if (data["Response"] == "True") {
+          List<dynamic> results = data['Search'];
+          return results.map((json) {
+            return Movie.fromJson({
+              ...json,
+              'TicketPrice': 8.99 + _random.nextDouble() * 16,
+            });
+          }).toList();
+        }
       }
-    } else {
-      throw Exception("Failed to load movies");
+      return [];
+    } catch (e) {
+      throw Exception("Failed to fetch movies: ${e.toString()}");
     }
   }
 }
